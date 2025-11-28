@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    animation: fadeIn 0.9s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+header {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    padding: 25px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+nav a {
+    margin: 0 18px;
+    color: #ffb43b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s ease;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background: white;
+    transition: width 0.3s ease;
+}
+nav a:hover::after {
+    width: 100%;
+}
+nav a:hover {
+    color: white;
+}
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    animation: slideUp 0.9s ease;
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+table, th, td {
+    border-bottom: 1px solid #ccc;
+}
+th {
+    background: #2a5298;
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    font-size: 17px;
+}
+td {
+    padding: 12px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+tr:hover td {
+    background: #e3f9fd;
+    transform: scale(1.02);
+}
+select {
+    padding: 8px;
+    font-size: 15px;
+    border: 2px solid #2a7198;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+select:hover {
+    transform: scale(1.08);
+}
+#msg {
+    color: #810a0a;
+    font-weight: bold;
+    margin-top: 18px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+}

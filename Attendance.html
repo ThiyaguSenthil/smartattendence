@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mark Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Mark Attendance</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="attendance.html">Mark Attendance</a>
+        <a href="report.html">Attendance Report</a>
+    </nav>
+</header>
+<section class="container">
+    <h2>Daily Attendance</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Mano</td>
+            <td>CS23101</td>
+            <td>
+                <select onchange="saveAttendance('CS23101', this.value)">
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Madhavan</td>
+            <td>CS23102</td>
+            <td>
+                <select onchange="saveAttendance('CS23102', this.value)">
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Sanjay</td>
+            <td>CS23103</td>
+            <td>
+                <select onchange="saveAttendance('CS23103', this.value)">
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <p id="msg"></p>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
